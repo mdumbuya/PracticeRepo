@@ -9,7 +9,7 @@ pipeline {
          stage('Upload to AWS') {
               steps {
                    withAWS(region:'us-east-2',credentials:'AKIA3KD4FW5SZIV7V45S') {
-                        s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'index.html', bucket:'peter-pan-bucket')
+                        s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'index.html', bucket:'peter-pan-bucket-moses')
                    }
               }
          }
